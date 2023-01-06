@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation by JS</title>
+</head>
+<body>
+    
+
+
+    <h1>JS Form Validation</h1>
+    <form action="" name="form" method="post">
+
+        <!-- <label for="">Name</label>
+        <input id="safdas" type="text" name="name" placeholder="Input your name here"> -->
+        <label for="" name="number">Number</label>
+        <input id="sajkj" type="number" name="number">
+        <p id="check"></p>
+        <input type="submit" name="submit-btn" value="register" onclick="reg()">
+
+    </form>
+
+
+    <script>
+        // let name = document.getElementById("safdas").value;
+        
+
+        function reg() {
+            let x = document.getElementById("sajkj".value);
+            let text;
+            if(isNaN(x) || x < 1 || x > 10 ) {
+                text = "Invalid Input"
+            } else {
+                text = "valid Input"
+            }
+            document.getElementById("check").innerHTML = text;
+
+        }
+    </script>
+</body>
+</html>
